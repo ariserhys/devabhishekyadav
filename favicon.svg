@@ -1,0 +1,65 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      .tech-lines {
+        stroke-dasharray: 8;
+        animation: dash 20s linear infinite;
+      }
+      
+      .bg-rect {
+        animation: pulse 4s ease-in-out infinite;
+      }
+      
+      .letter-a {
+        animation: glow 3s ease-in-out infinite;
+      }
+    }
+    
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 100;
+      }
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        filter: brightness(1);
+      }
+      50% {
+        filter: brightness(1.2);
+      }
+    }
+    
+    @keyframes glow {
+      0%, 100% {
+        filter: drop-shadow(0 0 0px rgba(255,255,255,0.0));
+      }
+      50% {
+        filter: drop-shadow(0 0 2px rgba(255,255,255,0.5));
+      }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect class="bg-rect" width="64" height="64" rx="16" fill="url(#gradient)"/>
+  
+  <!-- Modern, geometric "A" letter -->
+  <g class="letter-a">
+    <!-- Triangle shape with fill -->
+    <path d="M32 14L46 50H18L32 14Z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+    <!-- Crossbar -->
+    <path d="M24 40H40" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Subtle tech pattern -->
+  <path class="tech-lines" d="M10 10L14 14M20 10L24 14M30 10L34 14M40 10L44 14M50 10L54 14M10 20L14 24M10 30L14 34M10 40L14 44M10 50L14 54M20 50L24 54M30 50L34 54M40 50L44 54M50 50L54 54M50 20L54 24M50 30L54 34M50 40L54 44" 
+        stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+</svg> 
